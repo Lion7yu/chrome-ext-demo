@@ -1,0 +1,27 @@
+{
+  "name": "Todo-List",
+  "description": "Plan your day",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background":{
+    "service_worker": "./script/background.js"
+  },
+  "permissions": ["storage","declarativeContent","contextMenus","notifications"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title":"这是一个 Chrome 插件的 Demo",
+    "default_icon": "./cat.png"
+
+  },
+	"icons":
+	{
+		"16": "./cat.png",
+		"48": "./cat.png",
+		"128": "./cat.png"
+	},
+  "options_page":"options.html",
+  "devtools_page": "devtools.html",
+  "chrome_url_overrides" : {
+    "newtab": "./options.html"
+  }
+}
